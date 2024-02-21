@@ -17,7 +17,7 @@ export default class extends BaseApplicationGenerator {
   get [BaseApplicationGenerator.PREPARING]() {
     return this.asPreparingTaskGroup({
       async preparingTemplateTask({ source, application }) {
-        source.addElasticsearchReindexer = ({ persistClass, primaryKeyName, entityInstance, entityClass, entityAbsolutePackage }) =>
+        source.addElasticsearchReindexer = ({ persistClass, primaryKeyName, entityClass, entityAbsolutePackage }) =>
           this.editFile(
             `${application.srcMainJava}${application.packageFolder}config/ElasticsearchReindexer.java`,
             createNeedleCallback({
@@ -94,9 +94,9 @@ public void set${javaBeanCase(propertyName)}(${propertyType} ${propertyName}) {
     return this.asPostWritingEntitiesTaskGroup({
       async postWritingEntitiesTemplateTask({ entities, source }) {
         for (const entity of entities.filter(entity => entity.searchEngine === 'elasticsearch' && !entity.builtInUserManagement)) {
-          const { persistClass, entityInstance, entityClass, entityAbsolutePackage } = entity;
+          const { persistClass, entityClass, entityAbsolutePackage } = entity;
           const primaryKeyName = entity.primaryKey.name;
-          source.addElasticsearchReindexer({ persistClass, primaryKeyName, entityInstance, entityClass, entityAbsolutePackage });
+          source.addElasticsearchReindexer({ persistClass, primaryKeyName, entityClass, entityAbsolutePackage });
         }
       },
     });
