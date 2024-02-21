@@ -19,11 +19,11 @@ public class ElasticsearchReindexer implements ApplicationListener<ContextRefres
     private final Logger log = LoggerFactory.getLogger(ElasticsearchReindexer.class);
 
     @Value("${application.elasticsearch-reindexer:false}")
-    Boolean enableReindex;
+    Boolean enableReindexer;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        if (Boolean.FALSE.equals(enableReindex)) {
+        if (Boolean.FALSE.equals(enableReindexer)) {
             log.info("Elasticsearch check skipped");
             return;
         }
@@ -54,8 +54,7 @@ public class ElasticsearchReindexer implements ApplicationListener<ContextRefres
                 .getResultList()
                 .forEach(id -> {
                     if (!esRepository.existsById(id)) {
-                        var transactionTemplate = new TransactionTemplate(transactionManager);
-                        transactionTemplate.execute(status -> {
+                        new TransactionTemplate(transactionManager).execute(status -> {
                             log.info("Reindexing entity {} with id {}", entity.name(), id);
                             esRepository.save(repository.findById(id).orElseThrow());
                             return status;
