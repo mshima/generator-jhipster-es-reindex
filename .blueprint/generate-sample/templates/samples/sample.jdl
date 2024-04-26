@@ -2,6 +2,7 @@ application {
   config {
     applicationType monolith
     cacheProvider no
+    devDatabaseType h2Disk
     searchEngine elasticsearch
     creationTimestamp 1632872179205
     testFrameworks [cypress]
