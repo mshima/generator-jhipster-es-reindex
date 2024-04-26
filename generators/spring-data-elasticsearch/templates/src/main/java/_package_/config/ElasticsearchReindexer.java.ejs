@@ -29,17 +29,13 @@ public class ElasticsearchReindexer implements ApplicationListener<ContextRefres
         }
         log.info("Checking Elasticsearch indexes");
         var applicationContext = event.getApplicationContext();
-        try {
-            for (EsEntity entity : EsEntity.values()) {
-                reindex(applicationContext, entity);
-            }
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        for (EsEntity entity : EsEntity.values()) {
+            reindex(applicationContext, entity);
         }
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
-    private void reindex(ApplicationContext applicationContext, EsEntity entity) throws ClassNotFoundException {
+    private void reindex(ApplicationContext applicationContext, EsEntity entity) {
         if (entity == EsEntity.ReindexerPlaceEndHolder) {
             return;
         }
