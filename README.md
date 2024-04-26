@@ -51,7 +51,7 @@ jhipster --blueprints es-reindexer --skip-jhipster-dependencies
 
 [npm-image]: https://img.shields.io/npm/v/generator-jhipster-es-reindexer.svg
 [npm-url]: https://npmjs.org/package/generator-jhipster-es-reindexer
-[github-generator-image]: https://github.com/jhipster/generator-jhipster-es-reindexer/actions/workflows/generator.yml/badge.svg
-[github-generator-url]: https://github.com/jhipster/generator-jhipster-es-reindexer/actions/workflows/generator.yml
-[github-integration-image]: https://github.com/jhipster/generator-jhipster-es-reindexer/actions/workflows/integration.yml/badge.svg
-[github-integration-url]: https://github.com/jhipster/generator-jhipster-es-reindexer/actions/workflows/integration.yml
+[github-generator-image]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/generator.yml/badge.svg
+[github-generator-url]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/generator.yml
+[github-integration-image]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/integration.yml/badge.svg
+[github-integration-url]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/integration.yml
