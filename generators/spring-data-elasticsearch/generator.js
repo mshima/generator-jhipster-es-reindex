@@ -9,9 +9,7 @@ export default class extends BaseApplicationGenerator {
   }
 
   async beforeQueue() {
-    if (!this.delegateToBlueprint) {
-      await this.dependsOnJHipster('server');
-    }
+    await this.dependsOnJHipster('spring-boot');
   }
 
   get [BaseApplicationGenerator.PREPARING]() {
