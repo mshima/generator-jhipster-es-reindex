@@ -50,7 +50,7 @@ jobs:
           binary-dir: ${{ github.workspace }}/generator-jhipster-es-reindexer/cli/
       - run: npm install
         working-directory: ${{ github.workspace }}/generator-jhipster-es-reindexer
-      - run: cli.cjs generate-sample ${{ matrix.sample-name }} --skip-jhipster-dependencies --force
+      - run: cli.cjs generate-sample ${{ matrix.sample-name }} --default-environment ${{ matrix.default-environment }} --skip-jhipster-dependencies --force
       - uses: jhipster/actions/compare-sample@v0
         id: compare
         if: >-
@@ -58,7 +58,7 @@ jobs:
           !contains(github.event.pull_request.labels.*.name, 'pr: disable-compare')
         with:
           generator-path: generator-jhipster-es-reindexer
-          cmd: cli.cjs generate-sample ${{ matrix.sample-name }} --skip-jhipster-dependencies --force --skip-install
+          cmd: cli.cjs generate-sample ${{ matrix.sample-name }} --default-environment ${{ matrix.default-environment }} --skip-jhipster-dependencies --force --skip-install
       - run: npm run ci:backend:test
         if: steps.compare.outputs.equals != 'true'
         id: backend

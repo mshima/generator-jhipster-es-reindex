@@ -6,7 +6,7 @@ const defaultMatrix = {
   os: ['ubuntu-latest'],
   'node-version': [RECOMMENDED_NODE_VERSION],
   'java-version': [RECOMMENDED_JAVA_VERSION],
-  'default-environment': ['prod'],
+  'default-environment': ['dev'],
 };
 
 export const buildMatrix = async samplesFolder => {
