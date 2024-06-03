@@ -4,7 +4,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Generator][github-generator-image]][github-generator-url]
-[![Integration Test][github-integration-image]][github-integration-url]
+[![Samples][github-samples-image]][github-samples-url]
 
 # Introduction
 
@@ -12,9 +12,9 @@ This is a [JHipster](https://www.jhipster.tech/) blueprint, that is meant to be 
 
 # Prerequisites
 
-As this is a [JHipster](https://www.jhipster.tech/) blueprint, we expect you have JHipster and its related tools already installed:
+As this is a [JHipster](https://www.jhipster.tech/) blueprint, we expect you have JHipster basic knowledge:
 
-- [Installing JHipster](https://www.jhipster.tech/installation/)
+- [JHipster](https://www.jhipster.tech/)
 
 # Installation
 
@@ -45,7 +45,7 @@ And looking for `(blueprint option: es-reindexer)` like
 To use an unreleased version, install it using git.
 
 ```bash
-npm install -g jhipster/generator-jhipster-es-reindexer#main
+npm install -g mshima/generator-jhipster-es-reindexer#main
 jhipster --blueprints es-reindexer --skip-jhipster-dependencies
 ```
 
@@ -53,5 +53,5 @@ jhipster --blueprints es-reindexer --skip-jhipster-dependencies
 [npm-url]: https://npmjs.org/package/generator-jhipster-es-reindexer
 [github-generator-image]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/generator.yml/badge.svg
 [github-generator-url]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/generator.yml
-[github-integration-image]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/integration.yml/badge.svg
-[github-integration-url]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/integration.yml
+[github-samples-image]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/samples.yml/badge.svg
+[github-samples-url]: https://github.com/mshima/generator-jhipster-es-reindexer/actions/workflows/samples.yml

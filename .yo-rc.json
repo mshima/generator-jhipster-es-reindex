@@ -13,6 +13,8 @@
         "written": true
       }
     },
+    "githubRepository": "mshima/generator-jhipster-es-reindexer",
+    "githubWorkflows": true,
     "jhipsterVersion": "8.1.0",
     "localBlueprint": false,
     "sampleWritten": true,
