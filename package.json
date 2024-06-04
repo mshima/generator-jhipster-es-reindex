@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-es-reindexer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Description for Es Reindexer",
   "keywords": [
     "yeoman-generator",
